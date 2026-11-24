@@ -7,6 +7,8 @@ use super::runner::{self, KernelState};
 use super::{translate, Mode, Options};
 use crate::gpu::rdna2::encode;
 
+mod structure_fuzz;
+
 /// A GPU and DXC for the instruction tests. Wave64 programs run natively where the adapter
 /// has 64-lane waves and in the split form (`runner::options`) where it has only 32 (an
 /// adapter with neither, such as WARP, skips).
